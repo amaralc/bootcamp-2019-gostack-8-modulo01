@@ -11,11 +11,13 @@ const server = express();
 // Request body = {"name": "Calil", "email": "calil@email"}
 
 
+const users = ['Diego', 'Cláudio', 'Victor'];
+
 //localhost:3000/teste
 
-server.get('/user/:id', (req, res) => {
-  const id = req.params.id;
-  return res.json({ message: `Buscando o usuário ${id}` });
+server.get('/users/:index', (req, res) => {
+  const { index } = req.params;
+  return res.json(users[index]);
 });
 
 server.listen(3000);
