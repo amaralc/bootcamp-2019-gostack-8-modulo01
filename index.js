@@ -47,8 +47,6 @@ function checkUserInArray(req, res, next) {
   return next();
 }
 
-
-
 // retorna usuários
 
 server.get('/users', (req, res) => {
